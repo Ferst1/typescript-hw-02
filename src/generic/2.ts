@@ -14,13 +14,13 @@ type AllType = {
 function compare<T extends keyof AllType>(
   top: Pick<AllType, T>,
   bottom: Pick<AllType, T>
-): AllType {
+): Pick<AllType, T> {
   return {
-    name: top.name,
-    color: top.color,
-    position: bottom.position,
-    weight: bottom.weight,
+    ...top,
+    ...bottom,
   };
 }
+
+export {};
 
 export {};
