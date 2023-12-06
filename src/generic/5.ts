@@ -11,6 +11,12 @@ interface KeyValuePair<K, V> {
 const pair1: KeyValuePair<number, string> = { key: 1, value: "One" };
 const pair2: KeyValuePair<string, boolean> = { key: "Two", value: true };
 
+// Коректніше буде ось так
+// interface KeyValuePair {
+// key: T;
+// value: U;
+// }"
+
 console.log(pair1);
 console.log(pair2);
 
